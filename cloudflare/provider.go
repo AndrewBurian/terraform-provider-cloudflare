@@ -94,6 +94,7 @@ func Provider() *schema.Provider {
 		DataSourcesMap: map[string]*schema.Resource{
 			"cloudflare_api_token_permission_groups": dataSourceCloudflareApiTokenPermissionGroups(),
 			"cloudflare_ip_ranges":                   dataSourceCloudflareIPRanges(),
+			"cloudflare_origin_ca_root_certificate":  dataSourceCloudflareOriginCARootCertificate(),
 			"cloudflare_waf_groups":                  dataSourceCloudflareWAFGroups(),
 			"cloudflare_waf_packages":                dataSourceCloudflareWAFPackages(),
 			"cloudflare_waf_rules":                   dataSourceCloudflareWAFRules(),
@@ -155,6 +156,8 @@ func Provider() *schema.Provider {
 			"cloudflare_zone_settings_override":                 resourceCloudflareZoneSettingsOverride(),
 			"cloudflare_zone":                                   resourceCloudflareZone(),
 			"cloudflare_zone_dnssec":                            resourceCloudflareZoneDNSSEC(),
+			"cloudflare_notification_policy":                    resourceCloudflareNotificationPolicy(),
+			"cloudflare_notification_policy_webhooks":           resourceCloudflareNotificationPolicyWebhooks(),
 		},
 	}
 

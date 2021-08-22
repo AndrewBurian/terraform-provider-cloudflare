@@ -1,13 +1,32 @@
 ## Unreleased
 
+* **New resource**: `cloudflare_notification_policy` ([#1138](https://github.com/cloudflare/terraform-provider-cloudflare/issues/1138)) 
+* **New resource**: `cloudflare_notification_policy_webhooks` ([#1151](https://github.com/cloudflare/terraform-provider-cloudflare/issues/1151)) 
+* **New datasource**: `cloudflare_origin_ca_root_certificate` ([#1158](https://github.com/cloudflare/terraform-provider-cloudflare/issues/1158)) 
+ 
+## 2.25.0 (August 4th, 2021)
+
+**Improvements**
+
+* `resource/cloudflare_access_device_posture_rule`: Add support for `domain_joined`, `firewall`, `os_version`, and `disk_encryption` ([#1137](https://github.com/cloudflare/terraform-provider-cloudflare/issues/1137))
+* provider: bump `cloudflare-go` to v0.20.0 ([#1146](https://github.com/cloudflare/terraform-provider-cloudflare/issues/1146))
+
+## 2.24.0 (July 19th, 2021)
+
 **Improvements**
 
 * `resource/cloudflare_logpush_job`: Add support for `"nel_reports"` as a dataset ([#1122](https://github.com/cloudflare/terraform-provider-cloudflare/issues/1122))
+* `resource/cloudflare_custom_hostname`: Allow SSL options to be optional when not required ([#1131](https://github.com/cloudflare/terraform-provider-cloudflare/issues/1131))
+* `resource/cloudflare_access_identity_provider`: Support optional Okta API token ([#1119](https://github.com/cloudflare/terraform-provider-cloudflare/issues/1119))
+* `resource/cloudflare_load_balancer_pool`: Add support for load shedding ([#1108](https://github.com/cloudflare/terraform-provider-cloudflare/issues/1108))
+* `resource/cloudflare_load_balancer_pool`: Add support for longitude and latitude ([#1093](https://github.com/cloudflare/terraform-provider-cloudflare/issues/1093))
 
 **Fixes**
 
 * `resource/cloudflare_record`: Use correct `Import` method on resource ([#1116](https://github.com/cloudflare/terraform-provider-cloudflare/issues/1116))
 * `resource/cloudflare_worker_cron_trigger`: Account for deletion of scripts and force a refresh of triggers ([#1121](https://github.com/cloudflare/terraform-provider-cloudflare/issues/1121))
+* `resource/cloudflare_rate_limit`: Handle `origin_traffic` missing from API response ([#1125](https://github.com/cloudflare/terraform-provider-cloudflare/issues/1125))
+* `resource/cloudflare_record`: Support `allow_overwrite` for root records ([#1129](https://github.com/cloudflare/terraform-provider-cloudflare/issues/1129))
 
 ## 2.23.0 (June 30th, 2021)
 
