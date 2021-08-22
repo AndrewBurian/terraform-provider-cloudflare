@@ -11,6 +11,7 @@ import (
 	"github.com/cloudflare/cloudflare-go"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
+	"github.com/pkg/errors"
 )
 
 func TestAccCloudflareLoadBalancerPool_Basic(t *testing.T) {
